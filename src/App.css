@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.icon {
+  font-size: 2em;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.icon:hover {
+  font-size: 2em;
+  transform: scale(1.2); 
+  transition: transform 0.1s ease-in-out;
+}
+
+.Curriculum {
+  background-color: white;
+  border-radius: 5px; 
+  padding: 0px;
+  cursor: pointer;
+}
+
+.Curriculum:hover {
+  background-color: white;
+  border-radius: 5px; 
+  padding: 0px;
+  transition: transform 0.1s ease-in-out;
+  transform: scale(1.2);
+}
+
+
