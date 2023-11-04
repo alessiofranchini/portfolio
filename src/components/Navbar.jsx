@@ -13,10 +13,10 @@ function CustomNavbar() {
                         <Nav.Link href="#home" className='mx-5'>Curriculum Vitae</Nav.Link>
                     </div>
                     <Nav className="me-auto">
-                        <Nav.Link href="https://github.com/tuoprofilo">
+                        <Nav.Link href="https://github.com/alessiofranchini">
                             <FaGithub className='icon mx-5' />
                         </Nav.Link>
-                        <Nav.Link href="https://linkedin.com/in/tuoprofilo">
+                        <Nav.Link href="https://www.linkedin.com/in/alessio-franchini-74abb6272/">
                             <FaLinkedin className='icon mx-5' />
                         </Nav.Link>
                     </Nav>
