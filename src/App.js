@@ -3,6 +3,7 @@ import './App.css';
 import CustomNavbar from "./components/Navbar";
 import Informazioni from "./components/Informazioni";
 import Skills from "./components/Skills";
+import Progetti from "./components/Progetti";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <CustomNavbar />
       <Informazioni />
       <Skills />
+      <Progetti />
     </div>
   );
 }

@@ -30,7 +30,7 @@ function Skills() {
 
     return (
         <Container>
-            <h2 className='text-center mb-5'>Skills</h2>
+            <h2 className='text-center mb-5 mt-5'>Skills</h2>
             <Row className='mb-5'>
                 {firstRowSkills.map((skill, index) => (
                     <Col key={index} md={2} className="text-center">
