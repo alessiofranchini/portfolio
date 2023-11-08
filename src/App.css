@@ -62,7 +62,7 @@
 .foto-profilo {
   width: 400px;
   height: 400px;
-  overflow: hidden;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -77,9 +77,21 @@ h2 {
 .skill-icon {
   width: 130px; 
   height: 120px; 
+  object-fit: contain;
 }
 
 .skill-icon:hover {
+  transition: transform 0.1s ease-in-out;
+  transform: scale(1.2);
+}
+
+.scheda-progetti {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.scheda-progetti:hover {
   transition: transform 0.1s ease-in-out;
   transform: scale(1.2);
 }

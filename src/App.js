@@ -4,6 +4,7 @@ import CustomNavbar from "./components/Navbar";
 import Informazioni from "./components/Informazioni";
 import Skills from "./components/Skills";
 import Progetti from "./components/Progetti";
+import Contattami from "./components/Contattami";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Informazioni />
       <Skills />
       <Progetti />
+      <Contattami />
     </div>
   );
 }

@@ -1,4 +1,8 @@
 import React from 'react';
+import capstone from '../assets/img/capstone.png';
+import netflix from '../assets/img/netflix.png';
+import meteo from '../assets/img/meteo.png';
+import stay from '../assets/img/stay.png';
 
 function Progetti() {
     return (
@@ -6,31 +10,31 @@ function Progetti() {
             <h2 className='text-center mt-5 mb-5'> Progetti </h2>
             <div className="row">
                 <div className="col-md-3">
-                    <a href="https://www.tuopagina1.com" target="_blank" rel="noopener noreferrer">
-                        <img src="url-immagine-1.jpg" alt="" />
+                    <a href="https://github.com/alessiofranchini/capstone_auto" target="_blank" rel="noopener noreferrer">
+                        <img className='scheda-progetti' src={capstone} alt="" />
                     </a>
-                    <p>Testo per il Progetto 1</p>
+                    <p className='mt-4'>Capstone</p>
                 </div>
 
                 <div className="col-md-3">
-                    <a href="https://www.tuopagina2.com" target="_blank" rel="noopener noreferrer">
-                        <img src="url-immagine-2.jpg" alt="" />
+                    <a href="https://github.com/alessiofranchini/netflix-project" target="_blank" rel="noopener noreferrer">
+                        <img className='scheda-progetti' src={netflix} alt="" />
                     </a>
-                    <p>Testo per il Progetto 2</p>
+                    <p className='mt-4'>Netflix</p>
                 </div>
 
                 <div className="col-md-3">
-                    <a href="https://www.tuopagina3.com" target="_blank" rel="noopener noreferrer">
-                        <img src="url-immagine-3.jpg" alt="" />
+                    <a href="https://github.com/alessiofranchini/w10-d5-weather-app" target="_blank" rel="noopener noreferrer">
+                        <img className='scheda-progetti' src={meteo} alt="" />
                     </a>
-                    <p>Testo per il Progetto 3</p>
+                    <p className='mt-4'>Meteo</p>
                 </div>
 
                 <div className="col-md-3">
-                    <a href="https://www.tuopagina4.com" target="_blank" rel="noopener noreferrer">
-                        <img src="url-immagine-4.jpg" alt="" />
+                    <a href="https://github.com/alessiofranchini/epicode/tree/main/WEEK%205/eserzio%20settimanale" target="_blank" rel="noopener noreferrer">
+                        <img className='scheda-progetti' src={stay} alt="" />
                     </a>
-                    <p>Testo per il Progetto 4</p>
+                    <p className='mt-4'>Medium</p>
                 </div>
             </div>
         </div>
