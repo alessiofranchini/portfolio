@@ -13,28 +13,28 @@ function Progetti() {
                     <a href="https://github.com/alessiofranchini/capstone_auto" target="_blank" rel="noopener noreferrer">
                         <img className='scheda-progetti' src={capstone} alt="" />
                     </a>
-                    <p className='mt-4'>Capstone</p>
+                    <p className='mt-1'>Capstone</p>
                 </div>
 
                 <div className="col-md-3">
                     <a href="https://github.com/alessiofranchini/netflix-project" target="_blank" rel="noopener noreferrer">
                         <img className='scheda-progetti' src={netflix} alt="" />
                     </a>
-                    <p className='mt-4'>Netflix</p>
+                    <p className='mt-1'>Netflix</p>
                 </div>
 
                 <div className="col-md-3">
                     <a href="https://github.com/alessiofranchini/w10-d5-weather-app" target="_blank" rel="noopener noreferrer">
                         <img className='scheda-progetti' src={meteo} alt="" />
                     </a>
-                    <p className='mt-4'>Meteo</p>
+                    <p className='mt-1'>Meteo</p>
                 </div>
 
                 <div className="col-md-3">
                     <a href="https://github.com/alessiofranchini/epicode/tree/main/WEEK%205/eserzio%20settimanale" target="_blank" rel="noopener noreferrer">
                         <img className='scheda-progetti' src={stay} alt="" />
                     </a>
-                    <p className='mt-4'>Medium</p>
+                    <p className='mt-1'>Medium</p>
                 </div>
             </div>
         </div>

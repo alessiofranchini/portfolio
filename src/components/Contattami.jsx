@@ -24,10 +24,10 @@ function Contattami() {
 
     return (
         <div>
-            <h2 className='text-center'>Contattami</h2>
-            <form className="d-flex flex-column align-items-center" id="contact-form">
+            <h2 className='text-center mt-5 mb-5'>Contattami</h2>
+            <form className="d-flex flex-column align-items-center responsive-form" id="contact-form">
                 <div className="d-flex flex-column align-items-start">
-                    <label className="fotmLabel ms-3 mb-2" htmlFor="Name">
+                    <label className="fotmLabel mb-2" htmlFor="Name">
                         Nome
                     </label>
                     <input
@@ -37,10 +37,11 @@ function Contattami() {
                         id="Name"
                         value={formData.user_name}
                         onChange={handleChange}
+                        className="form"
                     />
                 </div>
                 <div className="d-flex flex-column align-items-start">
-                    <label className="fotmLabel ms-3 mb-2" htmlFor="mail">
+                    <label className="fotmLabel mb-2 mt-1" htmlFor="mail">
                         Email
                     </label>
                     <input
@@ -50,10 +51,11 @@ function Contattami() {
                         id="mail"
                         value={formData.user_email}
                         onChange={handleChange}
+                        className="form"
                     />
                 </div>
                 <div className="d-flex flex-column align-items-start">
-                    <label className="fotmLabel ms-3 mb-2" htmlFor="msg">
+                    <label className="fotmLabel mb-2 mt-1" htmlFor="msg">
                         Messaggio
                     </label>
                     <textarea
@@ -63,10 +65,11 @@ function Contattami() {
                         value={formData.message}
                         onChange={handleChange}
                         rows="6"
+                        className="form"
                     />
                 </div>
-                <button type="button" onClick={handleSendEmail}>
-                    Invia Email
+                <button className='mt-2 mb-2' type="button" onClick={handleSendEmail}>
+                    Invia
                 </button>
             </form>
         </div>

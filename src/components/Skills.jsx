@@ -33,7 +33,7 @@ function Skills() {
             <h2 className='text-center mb-5 mt-5'>Skills</h2>
             <Row className='mb-5'>
                 {firstRowSkills.map((skill, index) => (
-                    <Col key={index} md={2} className="text-center">
+                    <Col key={index} xs={6} sm={4} md={2} className="text-center">
                         <img src={skill.icon} alt={skill.name} className="skill-icon" />
                         <p className='mt-4'>{skill.name}</p>
                     </Col>
@@ -42,7 +42,7 @@ function Skills() {
             <Row>
                 <Col md={2} className="text-center"></Col> {/* Spazio vuoto per far iniziare la prima immagine sotto la seconda */}
                 {secondRowSkills.map((skill, index) => (
-                    <Col key={index} md={2} className="text-center">
+                    <Col key={index} xs={6} sm={4} md={2} className="text-center">
                         <img src={skill.icon} alt={skill.name} className="skill-icon" />
                         <p className='mt-4'>{skill.name}</p>
                     </Col>

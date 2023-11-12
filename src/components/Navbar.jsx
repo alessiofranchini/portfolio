@@ -7,19 +7,22 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 function CustomNavbar() {
     return (
         <>
-            <Navbar bg="dark" data-bs-theme="dark">
+            <Navbar bg="dark" variant="dark" expand="md" fixed="top">
                 <Container>
                     <div className='Curriculum'>
-                        <Nav.Link href="#home" className='mx-5'>Curriculum Vitae</Nav.Link>
+                        <Nav.Link href={'https://drive.google.com/file/d/1Qd_5gZVQ-dEOqX9-tofVmP6F-gXvXdRv/view?usp=sharing'} className='mx-2 mx-md-5'>Curriculum Vitae</Nav.Link>
                     </div>
-                    <Nav className="me-auto">
-                        <Nav.Link href="https://github.com/alessiofranchini">
-                            <FaGithub className='icon mx-5' />
-                        </Nav.Link>
-                        <Nav.Link href="https://www.linkedin.com/in/alessio-franchini-74abb6272/">
-                            <FaLinkedin className='icon mx-5' />
-                        </Nav.Link>
-                    </Nav>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse>
+                        <Nav className="ms-auto">
+                            <Nav.Link href="https://github.com/alessiofranchini">
+                                <FaGithub className='icon mx-2 mx-md-5' />
+                            </Nav.Link>
+                            <Nav.Link href="https://www.linkedin.com/in/alessio-franchini-74abb6272/">
+                                <FaLinkedin className='icon mx-2 mx-md-5' />
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>

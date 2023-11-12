@@ -4,14 +4,14 @@ import foto from '../assets/img/foto.jpg';
 
 function Informazioni() {
     return (
-        <Container>
-            <Row>
-                <Col md={6}>
+        <Container className='container-informazioni'>
+            <Row className="align-items-center text-center">
+                <Col xs={12} md={6}>
                     <div className="profile-image m-5">
                         <img src={foto} alt="Foto Profilo" className='foto-profilo' />
                     </div>
                 </Col>
-                <Col md={6} className="d-flex align-items-center">
+                <Col xs={12} md={6} className="d-flex align-items-center">
                     <div className="curriculum-info m-5 text-center">
                         <h1>Alessio Franchini</h1>
                         <h2>Web developer full-stack</h2>
