@@ -4,6 +4,7 @@ import netflix from '../assets/img/netflix.png';
 import meteo from '../assets/img/meteo.png';
 import stay from '../assets/img/stay.png';
 import pub from '../assets/img/pub.png';
+import calcolatrice from '../assets/img/calcolatrice.png';
 
 function Progetti() {
     return (
@@ -43,6 +44,13 @@ function Progetti() {
                         <img className='scheda-progetti' src={pub} alt="" />
                     </a>
                     <p className='mt-1'>Sito web locale</p>
+                </div>
+
+                <div className="col-md-3">
+                    <a href="https://github.com/alessiofranchini/epicode/tree/main/WEEK%202/esercizio%20settimanale" target="_blank" rel="noopener noreferrer">
+                        <img className='scheda-progetti' src={calcolatrice} alt="" />
+                    </a>
+                    <p className='mt-1'>Calcolatrice</p>
                 </div>
             </div>
         </div>
