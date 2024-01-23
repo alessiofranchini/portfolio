@@ -10,7 +10,7 @@ function CustomNavbar() {
             <Navbar bg="dark" variant="dark" expand="md" fixed="top">
                 <Container>
                     <div className='Curriculum'>
-                        <Nav.Link href={'https://drive.google.com/file/d/1Qd_5gZVQ-dEOqX9-tofVmP6F-gXvXdRv/view?usp=sharing'} className='mx-2 mx-md-5'>Curriculum Vitae</Nav.Link>
+                        <Nav.Link href={'https://drive.google.com/file/d/1LRDNwC8bau8aZJFp-zd3iF8zH-PdwOzY/view?usp=sharing'} className='mx-2 mx-md-5'>Curriculum Vitae</Nav.Link>
                     </div>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse>
