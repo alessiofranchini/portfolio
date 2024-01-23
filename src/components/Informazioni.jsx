@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import foto from '../assets/img/foto.jpg';
+import foto from '../assets/img/foto.png'
 
 function Informazioni() {
     return (
