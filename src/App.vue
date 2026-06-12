@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="site-shell">
     <CustomNavbar />
     <main>
       <Informazioni />

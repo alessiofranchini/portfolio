@@ -2,19 +2,32 @@
   <section id="competenze">
     <div class="container">
       <div class="section-header" v-fadein>
+        <span class="section-label">Stack</span>
         <h2 class="section-title">{{ t.skills.title }}</h2>
-        <div class="section-line"></div>
+        <p class="section-sub">{{ t.skills.description }}</p>
       </div>
 
-      <div class="skills-grid">
+      <div class="skills-categories">
         <div
-          v-for="(skill, index) in skillsData"
-          :key="skill.name"
-          class="skill-card"
-          v-fadein="index * 60"
+          v-for="(category, index) in categories"
+          :key="category.label"
+          class="skill-category"
+          v-fadein="index * 100"
         >
-          <img :src="skill.icon" :alt="skill.name" />
-          <span>{{ skill.name }}</span>
+          <span class="skill-category-label">{{ category.label }}</span>
+          <div class="skill-pills">
+            <span
+              v-for="skill in category.skills"
+              :key="skill"
+              class="skill-pill"
+            >{{ skill }}</span>
+          </div>
+        </div>
+        <div class="skill-category" v-fadein="300">
+          <span class="skill-category-label">{{ t.skills.languagesLabel }}</span>
+          <div class="skill-pills">
+            <span v-for="lang in t.skills.languages" :key="lang" class="skill-pill">{{ lang }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -23,29 +36,21 @@
 
 <script setup>
 import { useLocale } from '../composables/useLocale.js'
-import html from '../assets/img/html.png'
-import css from '../assets/img/css.png'
-import JavaScript from '../assets/img/JavaScript.png'
-import Bootstrap_logo from '../assets/img/Bootstrap_logo.png'
-import sass from '../assets/img/sass.png'
-import reactlogo from '../assets/img/reactlogo.png'
-import Java from '../assets/img/Java.png'
-import spring from '../assets/img/spring.png'
-import postman from '../assets/img/postman.svg'
-import Postgresql from '../assets/img/Postgresql.png'
 
 const { t } = useLocale()
 
-const skillsData = [
-  { name: 'HTML', icon: html },
-  { name: 'CSS', icon: css },
-  { name: 'JavaScript', icon: JavaScript },
-  { name: 'Bootstrap', icon: Bootstrap_logo },
-  { name: 'Sass', icon: sass },
-  { name: 'React', icon: reactlogo },
-  { name: 'Java', icon: Java },
-  { name: 'Spring Boot', icon: spring },
-  { name: 'Postman', icon: postman },
-  { name: 'PostgreSQL', icon: Postgresql },
+const categories = [
+  {
+    label: 'Frontend',
+    skills: ['Vue 3', 'Angular', 'React', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Pinia', 'VeeValidate'],
+  },
+  {
+    label: 'Backend',
+    skills: ['Laravel', 'PHP', 'REST API'],
+  },
+  {
+    label: 'Database & Tools',
+    skills: ['MySQL', 'PostgreSQL', 'Git', 'Postman'],
+  },
 ]
 </script>

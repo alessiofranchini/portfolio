@@ -1,19 +1,24 @@
 <template>
   <nav class="navbar" :class="{ scrolled: isScrolled }">
     <div class="navbar-inner">
-      <button class="lang-btn" @click="toggleLocale" :aria-label="locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'">
-        {{ locale === 'it' ? 'EN' : 'IT' }}
-      </button>
+      <a href="#home" class="nav-brand" aria-label="Torna in cima">
+        Alessio Franchini
+      </a>
+
+      <div class="nav-links" aria-label="Navigazione principale">
+        <a href="#competenze">{{ t.nav.skills }}</a>
+        <a href="#progetti">{{ t.nav.projects }}</a>
+        <a href="#contattami">{{ t.nav.contact }}</a>
+      </div>
 
       <div class="nav-right">
-        <a
-          href="https://drive.google.com/file/d/1LRDNwC8bau8aZJFp-zd3iF8zH-PdwOzY/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cv-btn"
+        <button
+          class="lang-btn"
+          @click="toggleLocale"
+          :aria-label="locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'"
         >
-          {{ t.nav.cv }}
-        </a>
+          {{ locale === 'it' ? 'EN' : 'IT' }}
+        </button>
 
         <a
           href="https://github.com/alessiofranchini"
@@ -38,6 +43,15 @@
             <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
           </svg>
         </a>
+
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cv-btn"
+        >
+          {{ t.nav.cv }}
+        </a>
       </div>
     </div>
   </nav>
@@ -52,7 +66,7 @@ const { locale, t, toggleLocale } = useLocale()
 const isScrolled = ref(false)
 
 function handleScroll() {
-  isScrolled.value = window.scrollY > 50
+  isScrolled.value = window.scrollY > 40
 }
 
 onMounted(() => window.addEventListener('scroll', handleScroll, { passive: true }))

@@ -1,71 +1,58 @@
 <template>
   <section id="contattami">
     <div class="container">
-      <div class="section-header" v-fadein>
-        <h2 class="section-title">{{ t.contact.title }}</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="contact-inner">
+        <div class="section-header" v-fadein>
+          <span class="section-label">{{ t.contact.title }}</span>
+          <h2 class="contact-headline">{{ t.contact.headline }}</h2>
+          <p class="contact-sub">{{ t.contact.intro }}</p>
+        </div>
 
-      <div class="contact-wrap" v-fadein="100">
-        <form class="contact-form" @submit.prevent="handleSendEmail">
-          <div class="form-group">
-            <label for="Name">{{ t.contact.name }}</label>
-            <input
-              type="text"
-              id="Name"
-              name="user_name"
-              :placeholder="t.contact.namePlaceholder"
-              v-model="formData.user_name"
-            />
-          </div>
+        <div class="contact-links" v-fadein="100">
+          <a href="mailto:alessiofranchini1@gmail.com" class="contact-link-row">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value">alessiofranchini1@gmail.com</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a href="tel:+393922571912" class="contact-link-row">
+            <span class="contact-link-label">{{ t.contact.phone }}</span>
+            <span class="contact-link-value">+39 392 257 1912</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a
+            href="https://github.com/alessiofranchini"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link-row"
+          >
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-value">github.com/alessiofranchini</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alessio-franchini-74abb6272/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link-row"
+          >
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">Alessio Franchini</span>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+        </div>
 
-          <div class="form-group">
-            <label for="mail">{{ t.contact.email }}</label>
-            <input
-              type="email"
-              id="mail"
-              name="user_email"
-              :placeholder="t.contact.emailPlaceholder"
-              v-model="formData.user_email"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="msg">{{ t.contact.message }}</label>
-            <textarea
-              id="msg"
-              name="message"
-              :placeholder="t.contact.messagePlaceholder"
-              v-model="formData.message"
-              rows="6"
-            />
-          </div>
-
-          <button type="submit" class="btn-primary form-submit">
-            {{ t.contact.send }}
-          </button>
-        </form>
+        <div class="contact-badges" v-fadein="200">
+          <span v-for="badge in t.contact.availabilityBadges" :key="badge" class="contact-badge">
+            {{ badge }}
+          </span>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
 import { useLocale } from '../composables/useLocale.js'
 
 const { t } = useLocale()
-
-const formData = reactive({
-  user_name: '',
-  user_email: '',
-  message: '',
-})
-
-function handleSendEmail() {
-  const { user_name, user_email, message } = formData
-  const emailBody = `Nome: ${user_name}\nEmail: ${user_email}\nMessaggio: ${message}`
-  const emailSubject = 'Messaggio dal modulo di contatto'
-  window.location.href = `mailto:alessiofranchini1@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
-}
 </script>
