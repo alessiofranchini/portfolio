@@ -10,8 +10,7 @@
           <div class="hero-actions">
             <a href="#contattami" class="btn-primary">{{ t.hero.contactBtn }}</a>
             <a
-              href="/cv.pdf"
-              download="Alessio Franchini CV.pdf"
+              href="/Alessio Franchini CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-secondary"
